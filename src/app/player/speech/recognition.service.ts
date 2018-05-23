@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core'
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class RecognitionService {
@@ -13,9 +13,10 @@ export class RecognitionService {
     }
 
     const recognition = new (window['SpeechRecognition'] || window['webkitSpeechRecognition'] || window['mozSpeechRecognition'] || window['msSpeechRecognition'])() as SpeechRecognition
-    recognition.continuous = true
-    recognition.interimResults = true
+    recognition.continuous = true;
+    recognition.interimResults = true;
+    recognition.lang = "en-IN";
 
-    return recognition
+    return recognition;
   }
 }
